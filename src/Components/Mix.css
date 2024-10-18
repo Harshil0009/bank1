@@ -1,0 +1,864 @@
+/* Navbar container styles */
+
+.cnavbar {
+    background-color: #1C1C1C;
+    border: 2px solid #333;
+    border-radius: 50px;
+    margin-top: 40px;
+    padding: 10px 20px;
+  }
+  
+  /* Image alignment */
+  .cimg {
+    padding-left: 10px;
+  }
+  
+  /* Navigation link styles */
+  .nav-link {
+    color: white !important;
+    font-size: 18px;
+    border: 0px solid ;
+    border-radius: 81px;
+    width: 100px;
+    height: 45px;
+    text-align: center;
+  }
+
+  .nav-link:hover{
+    background-color: #262626;
+    ;
+  }
+  
+  /* Buttons styling */
+  .btns {
+    border: none;
+    background-color: #1C1C1C;
+    border-radius: 50px;
+    height: 55px;
+    width: 109px;
+    color: white;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .btns:hover {
+    background-color: #CAFF33;
+    color: #111;
+  }
+  
+  /* Align big text color */
+  big {
+    color: white;
+    margin-left: 5px;
+  }
+  
+  /* Centering the navigation links */
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Align buttons to the right */
+  .d-flex {
+    margin-left: auto; /* Pushes buttons to the right */
+  }
+  
+  /* Toggle Button Styling */
+.navbar-toggler {
+    border: none !important;
+    outline: none;
+    background-color: transparent;
+    padding: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Three yellow lines - Hamburger Icon */
+  .navbar-toggler-icon {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: yellow;
+    border-radius: 2px; /* Rounded corners for modern look */
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: yellow;
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  /* Position top and bottom lines */
+  .navbar-toggler-icon::before {
+    top: -10px;
+  }
+  
+  .navbar-toggler-icon::after {
+    top: 10px;
+  }
+  
+  /* Transform to 'X' when expanded */
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  
+
+/* now here start dashbord css */
+
+/* src/components/BankDashboard.css */
+
+/* Container styling */
+.dashboard-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Left panel styling */
+.left-panel {
+  max-width: 600px;
+}
+
+.left-panel h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.left-panel p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.left-panel .highlight {
+  color: #8fff00;
+  font-weight: bold;
+}
+
+.left-panel .description {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .left-panel {
+    max-width: 100%;
+  }
+
+  .left-panel h1 {
+    font-size: 2.5rem;
+  }
+
+  .left-panel p {
+    font-size: 1.1rem;
+  }
+
+  .open-account-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.open-account-btn {
+  background-color: #8fff00;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #1a1a1a;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+.right-panel {
+  background-color: #1C1C1C;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.income {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.transactions h3 {
+  margin-bottom: 10px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.transaction .negative {
+  color: red;
+}
+
+.transaction .positive {
+  color: green;
+}
+
+.transaction .icon {
+  margin-right: 5px;
+}
+
+.currency-exchange {
+  margin-top: 20px;
+}
+
+.exchange-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.exchange-input input {
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+}
+
+.exchange-btn {
+  width: 100%;
+  background-color: #22251B;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: #D1FF4D;
+  font-weight: bold;
+  border-radius: 71px;
+}
+
+.supported-currencies {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.currency-list span {
+  font-size: 1.5rem;
+  margin: 0 5px;
+}
+
+/* FeaturesSection css start from here */
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .features-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
+}
+
+.feature-card {
+  background-color: #1C1C1C;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* UseCases css start from here */
+
+.stats m{
+  color: #76d700;
+}
+.use-cases-container {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.use-cases-container h2 {
+  font-size: 2rem;
+  color: #8fff00;
+}
+
+.use-cases-container p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.use-cases-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.individual-section, .business-section {
+  /* background-color: #111; */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.individual-section h3, .business-section h3 {
+  font-size: 1.8rem;
+  color: #8fff00;
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.stats div {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stats span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+button {
+  background-color: #1C1C1C;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #76d700;
+  color: #111;
+}
+
+@media (min-width: 768px) {
+  .use-cases-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+
+/* feature css start from here */
+
+.card-header .highlight{
+  color: #8fff00;
+  font-weight: bold;
+}
+
+.card-fet{
+  background-color: #1a1a1a;
+  border: none;
+  box-shadow: none;
+  color: white;
+  width: 100%;
+}
+
+.cardleft{
+  width: 245px; 
+  height: 220px;
+  padding: 25px 25px 25px 25px;
+  border-radius: 12px;
+  opacity: 0px;
+  background-color: #1C1C1C;
+}
+
+.leftcon{
+  border: 1px solid #262626;
+  color: white;
+  background-color: #262626;
+  width: 190px;
+  height: 49px;
+  border-radius: 100px;
+  padding: 10px 24px 18px 24px;
+  font-family: Lexend;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.leftcon:hover{
+  background-color: #1A1A1A;
+  color: #CAFF33;
+}
+
+.crd{
+  width: auto;
+  height: 227px;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  background-color: #1C1C1C;
+  color: white;
+  text-align: left;
+}
+
+.cardcont{
+  display: flex;
+  flex-direction: row;
+}
+
+.cardright {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
+  gap: 10px;
+  flex: 2; /* Take more space compared to the left column */
+  width: 100%; /* Ensure it stays responsive */
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center; /* Center elements */
+  }
+
+  .cardright {
+    grid-template-columns: 1fr; /* Switch to 1 column on tablets */
+    width: 100%;
+  }
+
+  .crd {
+    width: 100%; /* Full width for cards */
+  }
+}
+
+/* For Mobile (576px and below) */
+@media (max-width: 576px) {
+  .cardleft {
+    max-width: 100%; /* Full width on mobile */
+    padding: 15px;
+  }
+
+  .leftcon {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .cardright {
+    grid-template-columns: 1fr; /* Maintain single column on small screens */
+    gap: 15px;
+    margin-top: 15px;
+  }
+}
+
+
+/* FAQ Css start from here */
+
+/* FAQ Grid Container */
+.crdfaq {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Space between cards */
+  flex: 2;
+  width: 100%; /* Full width */
+  margin-left: 10px;
+}
+
+/* Card Styling */
+.crdf {
+  background-color: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  width: auto;
+}
+
+/* Heading Styling */
+.chad {
+  color: white;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Paragraph Styling */
+.cbdy p {
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+/* Responsive Design */
+
+/* For Tablets (768px and below) */
+@media (max-width: 768px) {
+  .crdfaq {
+    grid-template-columns: 1fr; /* Switch to 1 column */
+    gap: 15px; /* Adjust gap */
+  }
+
+  .crdf {
+    width: 100%; /* Ensure full width for cards */
+  }
+}
+
+/* For Mobile (576px and below) */
+@media (max-width: 576px) {
+  .crdf {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .cbdy p {
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* Testimonial css start from here */
+
+.testimonial-container {
+  background-color: #1A1A1A;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Header Section */
+.testimonial-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+.highlight {
+  color: #CAFF33;
+}
+
+.testimonial-header p {
+  margin-bottom: 20px;
+  color: #b3b3b3;
+  font-size: 16px;
+  text-align: center;
+}
+
+.toggle-buttons {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.toggle-btn {
+  background-color: #1a1a1a;
+  color: #b3b3b3;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background-color: #CAFF33;
+  color: #000;
+}
+
+/* Slider Section */
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px 0;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.right {
+  right: 10px;
+}
+
+.testimonial-card {
+  display: none;
+  max-width: 400px;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out;
+  height: 290px;
+}
+
+.testimonial-card.active {
+  display: block;
+  opacity: 1;
+}
+
+.testimonial-card.inactive {
+  opacity: 0.2;
+}
+
+.quote-symbol {
+  font-size: 48px;
+  color: #CAFF33;
+}
+
+.client-name {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #CAFF33;
+}
+
+/* CTA Section */
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1A1A1A;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: 1px solid #1C1C1C; /* Add border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+.cta-content h3 {
+  margin: 0;
+}
+
+.cta-button {
+  background-color: #CAFF33;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #bfff00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-container {
+    padding: 20px;
+  }
+
+  .testimonial-card {
+    max-width: 90%;
+  }
+
+  .cta-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Footer css start from here */
+
+/* Footer Container */
+.footer {
+  background-color:  #1C1C1C;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Lexend', sans-serif;
+}
+
+/* Top Section: Logo and Nav Links */
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-logo {
+  width: 50px;
+  height: auto;
+}
+
+.footer-nav a {
+  color: #CAFF33;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Middle Section: Contact Info */
+.footer-middle {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* Bottom Section: Social Icons and Copyright */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  background-color: #CAFF33;
+  color: black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon:hover {
+  background-color: #bfff00;
+}
+
+/* Footer Terms Links */
+.footer-terms a {
+  color: #CAFF33;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-terms a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-middle {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+}
